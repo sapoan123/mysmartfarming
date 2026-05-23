@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Smart Farming IoT | Sistem Pertanian Pintar untuk Semangka</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo"><i class="fas fa-leaf"></i> Smart Farming IoT</div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#cara-kerja">Cara Kerja</a></li>
+        <li><a href="#manfaat">Manfaat</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="container hero">
+        <div class="hero-content">
+          <h1>Solusi Pertanian Pintar untuk Masa Depan</h1>
+          <p>
+            Sistem IoT otomatis untuk pemupukan dan penyemprotan pestisida dengan monitoring real-time melalui smartphone. <br />
+            Optimalkan hasil panen semangka Anda!
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="startNowBtn"><i class="fas fa-rocket"></i> Mulai Sekarang</button>
+            <button class="btn-outline" id="learnMoreBtn"><i class="fas fa-play-circle"></i> Pelajari Lebih Lanjut</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="smart-device">
+            <div class="device-header">
+              <span><i class="fas fa-signal"></i> IoT Dashboard</span>
+              <span>Online <i class="fas fa-circle" style="color: #2bc46d; font-size: 0.6rem"></i></span>
+            </div>
+            <div class="sensor-row" id="heroSensorRow">
+              <span><i class="fas fa-tint"></i> Kelembaban tanah: <span id="heroMoistureSpan">68%</span></span>
+              <span><i class="fas fa-cloud-sun"></i> Cuaca: Cerah</span>
+            </div>
+            <div class="sensor-row">
+              <span class="sensor-badge" id="pupukStatusBadge"><i class="fas fa-spray-can"></i> Pemupukan: siaga</span>
+              <span class="sensor-badge"><i class="fas fa-bell"></i> Notifikasi: aktif</span>
+            </div>
+          </div>
+          <div class="hero-icons">
+            <i class="fas fa-microchip"></i>
+            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-water"></i>
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <p style="font-size: 0.8rem; text-align: center; margin-top: 0.5rem"><i class="fas fa-charging-station"></i> Sensor IoT + ESP32 | Real-time alert ke smartphone</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" style="background: var(--gray-light)">
+      <div class="container">
+        <h2 class="section-title">Fitur Canggih <span style="color: #1f8a4c">Smart Farming</span></h2>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><i class="fas fa-seedling"></i></div><h3>Monitoring Tanah</h3><p>Sensor kelembaban, pH, dan suhu tanah real-time.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-tachometer-alt"></i></div><h3>Pemupukan Otomatis</h3><p>Jadwal pemupukan presisi sesuai kebutuhan tanaman semangka.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-bug"></i></div><h3>Penyemprotan Otomatis</h3><p>Deteksi hama & penyemprotan pestisida terkendali IoT.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-boxes"></i></div><h3>Monitoring Inventori</h3><p>Stok pupuk & pestisida terpantau, notifikasi jika menipis.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-cloud-sun-rain"></i></div><h3>Monitoring Cuaca</h3><p>Integrasi prakiraan cuaca dan suhu lingkungan.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-shield-alt"></i></div><h3>Sistem Keamanan</h3><p>Deteksi gerak, alarm & notifikasi anti-pencurian.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cara Kerja Sistem -->
+    <section id="cara-kerja">
+      <div class="container">
+        <h2 class="section-title">Bagaimana <span style="color: #1f8a4c">Sistem Bekerja?</span></h2>
+        <div class="steps">
+          <div class="step-item"><div class="step-number">1</div><h3>Sensor membaca kondisi tanah</h3><p>Sensor kelembaban, suhu, & NPK mengirim data ke node ESP32.</p></div>
+          <div class="step-item"><div class="step-number">2</div><h3>Data diproses oleh ESP32</h3><p>Mikrokontroler menganalisis threshold pemupukan & cuaca.</p></div>
+          <div class="step-item"><div class="step-number">3</div><h3>Sistem mengaktifkan pompa otomatis</h3><p>Pomupukan & penyemprotan pestisida sesuai kebutuhan.</p></div>
+          <div class="step-item"><div class="step-number">4</div><h3>Monitoring real-time via smartphone/web</h3><p>Dashboard & notifikasi push ke petani.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="manfaat" style="background: var(--green-soft)">
+      <div class="container">
+        <h2 class="section-title">Manfaat <span style="color: #0a3d2a">Sistem Pertanian Pintar</span></h2>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><i class="fas fa-stopwatch"></i></div><h3>Menghemat waktu & tenaga</h3><p>Automatisasi mengurangi kerja manual hingga 70%.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>Mengurangi risiko gagal panen</h3><p>Deteksi dini hama & kondisi tanah tidak ideal.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-mobile-alt"></i></div><h3>Monitoring real-time</h3><p>Pantau seluruh lahan melalui smartphone dimanapun.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-charging-station"></i></div><h3>Meningkatkan efisiensi pertanian</h3><p>Hemat pupuk & pestisida, hasil panen optimal.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Preview (Real-time Simulation) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Dashboard Monitoring <span style="color: #1f8a4c">Real-Time</span></h2>
+        <div class="dashboard-preview">
+          <div class="dashboard-mock">
+            <!-- Kelembaban -->
+            <div class="metric-card">
+              <div class="metric-title"><i class="fas fa-tint"></i> Kelembaban Tanah</div>
+              <div class="metric-value"><span id="moistureValue">68</span>%</div>
+              <div class="progress-bar"><div id="moistureFill" class="progress-fill" style="width: 68%"></div></div>
+              <span id="moistureStatus" class="badge-green">Optimal</span>
+            </div>
+            <!-- Stok Pupuk -->
+            <div class="metric-card">
+              <div class="metric-title"><i class="fas fa-flask"></i> Stok Pupuk</div>
+              <div class="metric-value"><span id="pupukValue">240</span> L</div>
+              <div class="progress-bar"><div id="pupukFill" class="progress-fill" style="width: 70%"></div></div>
+              <span id="pupukSisaText">Sisa: 70%</span>
+            </div>
+            <!-- Stok Pestisida -->
+            <div class="metric-card">
+              <div class="metric-title"><i class="fas fa-skull-crossbones"></i> Stok Pestisida</div>
+              <div class="metric-value"><span id="pestisidaValue">85</span> L</div>
+              <div class="progress-bar"><div id="pestisidaFill" class="progress-fill" style="width: 42%"></div></div>
+              <span id="pestisidaWarningSpan">Perlu perhatian</span>
+            </div>
+            <!-- Cuaca Statis -->
+            <div class="metric-card">
+              <div class="metric-title"><i class="fas fa-sun"></i> Kondisi Cuaca</div>
+              <div class="metric-value">Cerah, 28°C</div>
+              <div>Kelembaban udara: 58% | Angin 6 km/h</div>
+              <div class="badge-green" style="margin-top: 8px">Ideal untuk semangka</div>
+            </div>
+            <!-- Notifikasi Sistem Dinamis -->
+            <div class="metric-card">
+              <div class="metric-title"><i class="fas fa-bell"></i> Notifikasi Sistem</div>
+              <div id="notificationList" class="notification-area">
+                <div class="notif-item"><i class="fas fa-check-circle" style="color:#1f8a4c"></i> Sistem online, sensor siap</div>
+                <div class="notif-item"><i class="fas fa-shield-alt"></i> Keamanan: tidak terdeteksi gerak</div>
+                <div class="notif-item"><i class="fas fa-tint"></i> Kelembaban tanah normal</div>
+              </div>
+            </div>
+          </div>
+          <p style="margin-top: 1.5rem; text-align: center; font-size: 0.8rem"><i class="fas fa-chart-simple"></i> Data real-time terintegrasi dengan sensor IoT & cloud (simulasi dinamis)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security System Section -->
+    <section id="security" style="background: var(--gray-light)">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-lock"></i> Keamanan Alat & Lahan</h2>
+        <div class="security-grid">
+          <div class="card"><div class="card-icon"><i class="fas fa-bell"></i></div><h3>Alarm Anti Pencurian</h3><p>Sensor getaran & PIR mendeteksi akses ilegal, alarm otomatis berbunyi dan notifikasi ke petani.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-envelope-open-text"></i></div><h3>Notifikasi Keamanan 24/7</h3><p>Push notifikasi ke smartphone saat terjadi pelanggaran area atau kerusakan perangkat.</p></div>
+          <div class="card"><div class="card-icon"><i class="fas fa-video"></i></div><h3>Monitoring Keamanan Alat</h3><p>Lokasi GPS, status koneksi sensor, dan laporan keamanan berkala via dashboard.</p></div>
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem"><span class="badge-green"><i class="fas fa-shield-haltered"></i> Sistem Proteksi + ENCRYPTED DATA</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col"><h4><i class="fas fa-leaf"></i> Smart Farming IoT</h4><p>Pertanian presisi berbasis IoT untuk petani semangka modern.<br />Pemupukan & pestisida otomatis + notifikasi realtime.</p></div>
+        <div class="footer-col"><h4>Kontak</h4><p><i class="fas fa-envelope"></i> hello@smartfarming.id</p><p><i class="fas fa-phone-alt"></i> +62 812 3456 7890</p><p><i class="fas fa-map-marker-alt"></i> Universitas Amikom Yogyakarta</p></div>
+        <div class="footer-col"><h4>Ikuti Kami</h4><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-github"></i></a></div><p style="margin-top: 1rem">Tim Inovasi Agritech 2025</p></div>
+      </div>
+      <div class="copyright"><p>&copy; 2025 Smart Farming IoT System — Masa Depan Pertanian Berkelanjutan.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
